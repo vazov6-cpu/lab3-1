@@ -39,3 +39,101 @@
   text-align: center;
   color: var(--color-title);
 }
+
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fade-up 0.6s ease both;
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  aspect-ratio: 1;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-accent);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+
+.features__icon svg,
+.features__svg,
+.contact__icon,
+.footer__book,
+.icon {
+  width: 50%;
+  height: 50%;
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.features__item:hover .features__icon {
+  transform: translateY(-0.3rem) scale(1.05);
+  box-shadow: 0 0.75rem 1.25rem rgba(39, 174, 96, 0.3);
+}
+
+
+.programs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 5 / 2;
+  padding: var(--gap);
+  text-align: center;
+  color: #fff;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.card__title { margin: 0 0 0.5rem; font-size: 1.4rem; font-weight: 800; }
+
+
+.contact { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+
+.form { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+
+.form__input {
+  width: 100%;
+  padding: 0.75rem 0.25rem;
+  border: 0;
+  border-bottom: 0.1rem solid #aaa;
+  font: 700 0.9rem var(--font-main);
+  background: transparent;
+  outline: none;
+  transition: border-color var(--transition);
+}

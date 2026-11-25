@@ -134,6 +134,40 @@
   border-bottom: 0.1rem solid #aaa;
   font: 700 0.9rem var(--font-main);
   background: transparent;
+  
   outline: none;
   transition: border-color var(--transition);
+}
+.form__input:focus { border-color: var(--color-accent); }
+
+.form__button {
+  min-width: 10rem;
+  padding: 0.85rem 2rem;
+  border: 0;
+  border-radius: 2rem;
+  font: 800 1rem var(--font-main);
+  color: #fff;
+  background-image: linear-gradient(180deg, var(--color-accent-light), var(--color-accent));
+  box-shadow: 0 0.25rem 0.6rem rgba(39, 174, 96, 0.4);
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.form__button:hover { transform: translateY(-0.15rem); }
+
+
+.footer { color: #fff; background: var(--color-dark); }
+.footer__inner { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1.5rem 0; }
+
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 48em) {
+  .features, .programs { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .card { aspect-ratio: 1; }
+  .contact { grid-template-columns: 1fr 1fr; }
+  .footer__inner { flex-direction: row; justify-content: space-between; }
 }

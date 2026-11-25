@@ -171,3 +171,4 @@
   .contact { grid-template-columns: 1fr 1fr; }
   .footer__inner { flex-direction: row; justify-content: space-between; }
 }
+}
